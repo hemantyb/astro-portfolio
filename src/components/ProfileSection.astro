@@ -1,0 +1,28 @@
+---
+import { profileData } from "@/data/profile.data";
+import NavigationLinks from "@/components/NavigationLinks.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<div
+  class="dark:bg-slate-900 h-screen w-full outline bg-gray-100 outline-gray-200 dark:outline-gray-800"
+>
+  <a
+    href="/"
+    class="flex flex-col items-center no-underline gap-2 transition-opacity"
+  >
+    <img
+      src={profileData.avatar}
+      class="w-30 h-30 rounded-full mt-15"
+      alt="avatar"
+    />
+    <h1 class="text-2xl font-semibold m-2 dark:text-gray-400">
+      {profileData.name}
+    </h1>
+  </a>
+  <p class="text-[0.9rem] mb-5 text-center italic dark:text-gray-400">
+    {profileData.bio}
+  </p>
+  <NavigationLinks />
+  <Footer />
+</div>
